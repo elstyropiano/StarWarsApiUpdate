@@ -1,0 +1,702 @@
+:root { 
+
+    --black:#000000;
+    --darkGreen:#167A11;
+    --darkRed:#AB1822;
+    --green:#2FF923;
+    --lightgray:#b0afaf;
+    --red:#EB212E;
+    --white:#fff; 
+    --yellow: #f9d71c;        
+}
+
+body{
+
+    background-attachment: fixed; 
+    background-image: url('images/darthVader.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    letter-spacing: 2px;   
+    font-family: 'Star Jedi', arial;
+}
+
+button{
+    
+    border-radius: 7px; 
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;    
+    cursor: pointer;
+    color:var(--yellow);
+    outline: none;    
+}
+
+button:hover{
+
+    background-color: var(--black);
+    border:1px solid var(--yellow);
+    color:var(--yellow);  
+}
+
+
+button:disabled{
+
+    background-color: var(--lightgray);
+}
+
+
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--lightgray);
+    margin: 0;
+    font: inherit;
+    
+    width: 20px;
+    height: 20px;
+    border: 0.15em solid var(--black);
+    border-radius: 3px;
+    /* transform: translateY(-0.075em); */
+    display: grid;
+    place-content: center;
+    box-shadow: none;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 0.10s transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: var(--black)
+  }
+  
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+img{
+
+    margin:50px;
+}
+
+.buttonShowFullCollection{
+    
+    background-color: transparent;
+    border: 1px solid var(--green);
+    color:var(--green);
+    padding:10px;
+    margin:10px;
+
+}
+
+.buttonShowFullCollection:hover{
+
+    background-color: var(--green);
+    color:var(--black);
+    border:1px solid var(--darkGreen)
+}
+
+#buttonsDiv{
+    display:flex; 
+      
+}
+
+
+.actions button{
+    flex:1;
+   
+}
+
+.buttonDelete.all{
+    background-color: var(--red);
+    /* flex:0.4; */
+    height:50px;
+    justify-content: center;
+    width:18%;
+    display: block;
+    width:40%;
+}
+.buttonSearch{
+
+    background-color: var(--yellow);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color:var(--black);
+    padding:10px;     
+}
+
+.buttonDelete{
+
+    align-items: center;
+    background-color: var(--red);
+    border: none;
+    color:var(--black);
+    display: flex;
+    justify-content: space-between;
+    margin:2px;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+.buttonDelete:hover{
+    background-color: var(--darkRed);
+    border:none;
+}
+
+.buttonExpand:hover{
+
+    background-color: var(--darkGreen);
+    border: none;
+}
+
+.buttonExpand{
+
+    background-color: var(--green);
+    border-style: none;
+    margin:2px;
+    max-height: 50px;
+    min-height: 50px;
+    color:var(--black)
+}
+
+.paginationButton{
+
+    background-color:var(--yellow);
+    color:var(--black);
+    height:100%;
+    font-size:18px;
+    margin-right:10px;
+    padding:10px;
+    transition: all 0.2s ease-in-out;   
+}
+
+.paginationButton.right:hover{
+
+    transform: translateX(10px);   
+}
+.paginationButton.left:hover{
+
+    transform: translateX(-10px);   
+}
+
+.closeButton div{
+
+    font-weight: 700;
+    text-transform: capitalize;   
+}
+
+.closeButton:hover{
+
+    background-color: var(--red)
+}
+
+.closeButton{ 
+
+    background-color: transparent;
+    border:1px solid var(--yellow);
+    color:var(--yellow);   
+    border-radius: 0%;
+}
+
+input {
+    
+    background: transparent;
+    border:1px solid var(--black);
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color:var(--yellow);
+    font-size: 25px;
+    margin:10px;
+    padding:5px;
+    text-align: center;  
+}
+.inputSearch{
+    width:210px;
+}
+select:disabled{
+
+    background-color:var(--lightgray);
+    color:black;
+}
+
+input:disabled{
+
+    background-color:var(--lightgray);
+    
+}
+
+input::placeholder{
+
+    color:var(--yellow);
+    font-size:12px;
+    text-transform: uppercase;  
+}
+
+.inputForPagination{
+
+    border: 1px solid var(--yellow);
+    width:50px;
+    font-size: 30px;
+}
+
+.inputSearch:focus{
+    
+    background-image: linear-gradient(to right top, var(--black),var(--black),var(--darkGreen));   
+    border: 1px solid var(--green);
+    color:var(--green);
+    font-size:25px;
+    outline: none;
+}
+
+
+
+input:hover{
+    border: 1px solid var(--green);
+}
+
+#container{
+
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#resultsAndSearch{
+
+  color: var(--yellow);
+  display:flex;
+  font-size: 20px;
+  justify-content:center;
+  margin:20px;
+  width: 90vw;
+}
+
+#resultsDiv{
+
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin:20px 0 0 0;
+    
+}
+
+.key{
+    
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 10px;
+    flex:1;
+    font-size: 20px;
+    font-weight: 600;
+    height:200px;
+    letter-spacing: 4px;
+    margin:2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.key:hover{
+    
+    background-image: linear-gradient(to right top, var(--black),var(--black),var(--darkGreen));
+    border:none;
+    color:var(--yellow);
+    transform: scale(1.2);
+}
+
+#divTable{
+
+    display: flex;
+    justify-content: center; 
+    width:95vw;  
+}
+
+#table {
+
+    color:var(--yellow);
+    display:flex;
+    flex-direction: column;  
+    width: 70vw;  
+}
+
+.paginationDiv{
+
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:60px;
+}
+
+.row{
+    display:flex;
+    
+}
+
+.rowDiv{
+    margin:10px; 
+    display: flex;
+}
+
+.actions{  
+    display:flex;
+    text-align: center;
+}
+
+
+
+/* .divLeft{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex:1;
+
+} */
+.divLeft{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex:1;
+
+}
+.areUsureText{
+
+    font-size: 15px;
+    color:var(--yellow)
+}
+.paginationDiv div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    /* flex: 1; */
+    
+}
+.actions div{
+
+    display:flex;
+    flex:1;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.actionsTh{
+
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+    word-break: break-word;
+}
+
+.divExtend{
+
+    flex:1.2;
+    display:flex
+}
+
+.spanBetweenPagination{
+    color:var(--yellow);
+    margin: 0 20px 0 20px;
+    font-size:30px;
+}
+
+tr{
+    
+    display:flex;
+    margin-bottom:10px;
+}
+
+.trDeleteAllChecked{
+    display: flex;
+    justify-content:flex-end
+    
+}
+.trDeleteAllChecked div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trDeleteAllChecked button{
+    margin-left:20px;
+    padding:30px;
+}
+
+
+th{ 
+    
+    align-items: center;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    color:var(--black);
+    display:flex;
+    flex:1;
+    font-size: 15px;
+    margin-bottom: 20px;
+    min-height:5vh ; 
+    word-break: break-word;
+}
+
+td{
+
+    /* text-align: start; */
+    min-height:5vh;
+    flex:1;
+    word-break: break-word;
+    margin-left: 5px;
+    font-size: 16px; 
+    /* padding-left: 5px; */   
+}
+
+.tableExtend{
+    background-color:transparent;
+    flex:1;
+    color: var(--yellow)
+}
+
+.id{
+    flex:0.15;  
+}
+
+.created{
+    
+    flex:0.8
+}
+
+.removeArea{
+    display:flex;
+    flex-direction: column;
+    font-size: 10px;
+    text-align: center;
+}  
+
+.removeArea div{
+
+    flex:1
+}
+.yes{
+    opacity: 0.9;
+    flex:1;
+    background-color:var(--green) ;
+    /* padding:20px; */
+    display: flex;
+    max-height: 50px;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+/* .yes.all{
+
+    padding:20px;
+
+}
+.no.all{
+    padding:20px;
+} */
+
+.yes:hover{
+    border: none;
+    /* flex:1; */
+    background-color:var(--darkGreen);
+    font-size:unset;
+}
+
+.no{
+    flex:1;
+    display: flex;
+    background-color: var(--red);
+    /* padding:20px; */
+    max-height: 50px;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.no:hover{
+
+    background-color: var(--darkRed);
+}
+
+
+
+select{
+
+    background-color: #2E67F8;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color:var(--green);
+    font-size: 25px;
+    height:58px;
+    margin:0 20px;
+    width:60px;  
+    border-radius: 7px;  
+}
+
+.divWithNoResultText{
+
+    color:var(--red);
+    font-size:25px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    margin:100px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media only screen and  (max-width:1000px){
+
+  
+    #resultsAndSearch{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #buttonsDiv{
+        flex-direction: column;
+        flex:1;
+        width:100%;
+        align-items: center;
+        
+    }
+    
+    .key{
+
+        letter-spacing: 10px;;
+        width:90%;
+        height:40px;
+        padding:10px;
+        margin:10px;
+    }
+    
+    .key:hover{
+        
+        transform: scale(1.1);
+    }
+
+    #divTable{
+
+        width:100vw;
+        flex-direction: column;
+    }
+    
+    #table {
+    
+        color:var(--yellow);
+        display:flex;
+        flex-direction: column;  
+        width:95%;
+        margin:20px;
+    }
+    .divExtend{
+
+        flex:1.2;
+        flex-direction: column;
+        width: 100vw;
+        margin:20px;
+    }
+    .closeButton{
+        width:95%;  
+    }
+    .closeButton div{
+        display: flex;
+        justify-content: center;
+        width:95%;
+    }
+    .tableExtend{
+        background-color:transparent;
+        width:95%;
+        color: var(--yellow)
+    }
+    .paginationDiv{
+        margin:20px;
+    }
+    .paginationButton{
+        margin:5px;
+    }
+    .spanBetweenPagination{
+        margin:2px;
+        font-size: 20px;
+    }
+    .inputForPagination{
+        margin:2px;
+        font-size: 20px;
+        width:30px;
+    }
+   
+    /* .no{
+        font-size: 8px;
+    }
+    .yes{
+        font-size: 8px; 
+    }
+    .areUsureText{
+        font-size: 12px;
+    } */
+    td{
+        font-size: 12px;;
+    }
+    /* .icon-trash{
+        font-size: 15px;
+    } */
+    input[type="checkbox"] {
+        width:15px;
+        height:15px;
+    }
+    img{
+        width:100%;
+    }
+    /* .divRight{
+        flex-direction: column;
+    } */
+    .actions{
+        flex-direction: column;
+    }
+    
+}
+
+
+
+/* .tableExtend th{ */
+    /* border:1px solid black */
+/* } */
+
+/* .inputSearch{
+    text-align: center;
+    color:var(--yellow);
+    width: 50%;
+    box-shadow: 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding:10px 0 10px 0;
+    font-size: 25px;
+    padding:5px;
+    background: transparent;
+} */
+
+/* .inputSearch:hover{
+    border: 1px solid var(--green);
+} */
+
+/* .inputSearch.ByIndex{
+    border:1px solid var(--black)
+} */
+
+  /* body{
+        background-image:url(images/darthVader2.png);
+    
+    } */
+    /* #header{
+    flex-wrap: wrap;
+    width:60vw;
+    margin-top:50px;
+    display:flex;
+    justify-content: space-around;    
+} */
+
+/* .headerDiv{
+
+    display: flex; 
+    margin:10px;   
+} */
